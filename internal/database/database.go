@@ -22,7 +22,7 @@ func ConnectDb() *gorm.DB {
 	godotenv.Load(".env")
 
 	// Set up the database connection string.
-	dsn := fmt.Sprintf("host=172.20.0.3 user=%s password=%s dbname=%s port=%s",
+	dsn := fmt.Sprintf("host=database user=%s password=%s dbname=%s port=%s",
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"),
 		os.Getenv("DB_NAME"),
